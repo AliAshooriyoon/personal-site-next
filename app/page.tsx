@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Main } from "@/components/Main";
+import Projects from "@/components/Projects";
 import Services from "@/components/Services";
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <Header />
         <Main />
         <Services />
+        <Projects />
       </div>
     </>
   );
