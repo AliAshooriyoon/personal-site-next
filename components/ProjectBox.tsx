@@ -1,6 +1,6 @@
 import "./ProjectBox.css";
 
-const ProjectBox = ({ imageAdresse = "fallback", title }) => {
+const ProjectBox = ({ imageAdresse = "fallback", title, technology }) => {
   return (
     <div className="bg-none relative project_box w-80 h-80 cursor-pointer">
       <div
@@ -10,7 +10,7 @@ const ProjectBox = ({ imageAdresse = "fallback", title }) => {
       <div className="absolute z-10 bottom-0 left-0 p-4 rounded-b-2xl w-full bg-stone-300 text-black">
         <div className="flex flex-col items-start gap-2">
           <span className="text-black project_title">{title}</span>
-          <span className="text-black project_lang border-2 border-stone-500 py-1 px-3 rounded-xl text-[0.7rem] text-center">React.js</span>
+          <span className="text-black project_lang border-2 border-stone-500 py-1 px-3 rounded-xl text-[0.7rem] text-center">{technology}</span>
 
         </div>
       </div>
