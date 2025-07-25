@@ -3,7 +3,6 @@ import { useState } from "react"
 import "./Experices.css"
 import { expericesData } from "@/expericesData"
 const Experices = () => {
-  console.log(expericesData)
   const [selectedEx, setSelectedEx] = useState(1);
   return (
     <>
@@ -30,19 +29,14 @@ const Experices = () => {
             </li>
           </div>
           <div className="details_experices pl-28 flex flex-col gap-2 pt-12">
-            <p className="details_title text-xl text-[#9ec5d5]">Ausbildung als Frontend Developer</p>
-            <p className="place_details   text-sm">Iran, Isfahan</p>
-            <span className="date_details text-sm">Juni 2024 - Sep. 2024</span>
+            <p className="details_title text-xl text-[#9ec5d5]"> {expericesData[selectedEx - 1].title} </p>
+            <p className="place_details   text-sm">{expericesData[selectedEx - 1].adresse}</p>
+            <span className="date_details text-sm">{expericesData[selectedEx - 1].date}</span>
             <div className="btns_details flex gap-4">
-              <button>JavaScript</button>
-              <button>React.js</button>
+              {expericesData[selectedEx - 1].technology.map((t) => <button key={t}> {t} </button>)}
             </div>
             <div className="tasks_details list-none flex gap-4 flex-col pt-4">
-              <li className="task_details"> React js aus Udemy lernen</li>
-              <li className="task_details"> Verschiedene Seiten durch React zeichnen.</li>
-              <li className="task_details"> Analyse die Seiten </li>
-              <li className="task_details"> Kreative Projekte erstellen</li>
-              <li className="task_details">Design Seiten durch Figma und Gimp</li>
+              {expericesData[selectedEx - 1]?.tasks.map((t) => <li key={t} className="task_details">{t} </li>)}
             </div>
           </div>
         </div>
