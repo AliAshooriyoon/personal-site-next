@@ -1,0 +1,25 @@
+.selected {
+  background-color: #9ec5d5;
+  color: black;
+  border: 0.2rem solid black;
+}
+.btns_details button {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.5rem;
+  border: 2px solid #9ec5d5;
+}
+.task_details {
+  position: relative;
+  padding-left: 1rem;
+}
+.task_details::before {
+  content: ' ';
+  position: absolute;
+  left: -2rem;
+  top: 0.7rem;
+  padding-right: 1rem;
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #fff;
+}
