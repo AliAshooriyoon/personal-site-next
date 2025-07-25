@@ -18,9 +18,9 @@ const Projects = () => {
           </div>
         </div>
         <div className="krojects_box flex gap-18 justify-center items-center p-12">
-          <ProjectBox technology={'React.js'} title={'ToDo list project'} imageAdresse={'3d-illustration-hand-putting-tick-paper'} />
-          <ProjectBox technology={'JavaScript'} title={'Lorem ipsum generator'} imageAdresse={'lorem'} />
-          <ProjectBox technology={'React.js'} title={'Shop project'} imageAdresse={"shopLogo"} />
+          <ProjectBox linkOnGit={'https://github.com/AliAshooriyoon/todoList'} technology={'React.js'} title={'ToDo list project'} imageAdresse={'3d-illustration-hand-putting-tick-paper'} />
+          <ProjectBox linkOnGit={'https://github.com/AliAshooriyoon/LoremIpsumGenerator'} technology={'JavaScript'} title={'Lorem ipsum generator'} imageAdresse={'lorem'} />
+          <ProjectBox linkOnGit={'https://github.com/AliAshooriyoon/onlineShop'} technology={'React.js'} title={'Shop project'} imageAdresse={"shopLogo"} />
         </div>
       </div>
     </>
