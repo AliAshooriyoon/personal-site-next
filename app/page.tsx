@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact";
 import Experices from "@/components/Experices";
 import { Header } from "@/components/Header";
 import { Main } from "@/components/Main";
@@ -12,6 +13,7 @@ export default function Home() {
         <Services />
         <Projects />
         <Experices />
+        <Contact />
       </div>
     </>
   );
