@@ -12,7 +12,7 @@ const Contact = () => {
             </div>
             <p className="phone flex flex-col">
               <span className="text-stone-500 text-sm">Handynummer</span>
-              <span className="text-xl">09130904233</span>
+              <span className="text-xl">0913***33</span>
             </p>
           </div>
           <div className="mail_box flex justify-start gap-4 items-center">
