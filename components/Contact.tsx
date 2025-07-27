@@ -1,7 +1,9 @@
+"use client"
+import { Element } from "react-scroll";
 const Contact = () => {
   return (
     <>
-      <div className="">
+      <Element name='contact' className="">
         <div className="info px-10 py-18 flex flex-col gap-10">
           <p className="title_info text-3xl">Möchten Sie mit mir Kontakt knüpfen ?</p>
           <div className="phone_box flex justify-start gap-4 items-center">
@@ -41,7 +43,7 @@ const Contact = () => {
             </p>
           </div>
         </div>
-      </div>
+      </Element>
     </>
   )
 }

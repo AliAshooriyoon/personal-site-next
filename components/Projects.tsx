@@ -1,9 +1,11 @@
+"use client"
 import ProjectBox from "./ProjectBox";
 import "./projects.css"
+import { Element } from "react-scroll"
 const Projects = () => {
   return (
     <>
-      <div className="py-32">
+      <Element name='projects' className="py-32">
         <h3 className="projects_title text-3xl text-left pl-22 ">Meine Projekte</h3>
         <div className="absolute right-20 flex gap-4">
           <div className=" bg-zinc-400  w-10 h-10 rounded-2xl flex items-center justify-center cursor-pointer">
@@ -22,7 +24,7 @@ const Projects = () => {
           <ProjectBox linkOnGit={'https://github.com/AliAshooriyoon/LoremIpsumGenerator'} technology={'JavaScript'} title={'Lorem ipsum generator'} imageAdresse={'lorem'} />
           <ProjectBox linkOnGit={'https://github.com/AliAshooriyoon/onlineShop'} technology={'React.js'} title={'Shop project'} imageAdresse={"shopLogo"} />
         </div>
-      </div>
+      </Element>
     </>
   )
 }

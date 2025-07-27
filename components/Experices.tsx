@@ -2,11 +2,12 @@
 import { useState } from "react"
 import "./Experices.css"
 import { expericesData } from "@/expericesData"
+import { Element } from "react-scroll";
 const Experices = () => {
   const [selectedEx, setSelectedEx] = useState(1);
   return (
     <>
-      <div className="bg-[rgb(21,19,19,56%)] py-24 px-12">
+      <Element name='experices' className="bg-[rgb(21,19,19,56%)] py-24 px-12">
         <p className="title_experices text-4xl">Berufliche Erfahrungen</p>
         <div className="main_experices flex items-center flex-row justify-start">
           <div className="names_experices list-none flex  flex-col gap-12 p-8 w-80">
@@ -40,7 +41,7 @@ const Experices = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Element>
     </>
   )
 }
