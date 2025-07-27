@@ -6,7 +6,13 @@ export const Main = () => {
       <div className="flex pt-20 px-36 pb-36 justify-around">
         <div className="main_text">
           <h1 className="text-4xl mb-6">Ali <span className="text-[#023E6F]">Ashouriyoun</span> </h1>
-          <h2 className="max-w-[32rem] leading-8">Creative front-end developer with more than +6 month of experience in enterprise companies and startups. Proficient in Html, Tailwind Css, Javascript, React, next js. </h2>
+          <h2 className="max-w-[32rem] leading-8">
+            Ich bin Ali, 18 Jahre alt und arbeite als Frontend-Entwickler.
+            Ich interessiere mich nicht nur für Frontend, sondern auch
+            für Linux und die Programmiersprache Python. Diese Webseite ist meine
+            persönliche Seite, die mit Next.js erstellt wurde,
+            um einen besseren Einblick in mich zu geben.
+          </h2>
           <div className="logos_networking"></div>
         </div>
         <div className="picture_box">
