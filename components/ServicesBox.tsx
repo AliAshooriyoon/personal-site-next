@@ -10,10 +10,11 @@ const ServicesBox = ({ title }) => {
         </div>
       </div>
       <p className="title_service text-black pt-4 text-xl">{title}</p>
-      <p className="info_service text-stone-600 text-sm pt-2 indent-3 max-w-[90%] mx-auto">
-        Die ist ein Beispiel für einen Blindtext,
-        der auf deutsch geschrieben ist. Es gibt
-        noch viele weitere Arten des Hauses,
+      <p className="info_service text-stone-600 text-sm pt-2 indent-3 max-w-[90%] mx-auto ">
+        <span className="text-lg max-w-[90%]">
+          {title == "Webseiten erstellen" ? "Webseiten durch NextJS, ReactJS, JavaScript, TailWind, CSS und HTML erstellen"
+            : title == "Seiten zeichnen" ? "Seiten durch Figma, Gimp, Krita und Luancy zeichnen" : "Linux als OS verwenden und es in manchen Bereichen verwenden, LPIC 1"}
+        </span>
       </p>
     </div>
 
