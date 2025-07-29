@@ -1,4 +1,12 @@
-const ServicesBox = ({ title }) => {
+type servicesBoxProps = {
+  dict: {
+    what: string,
+    title1: string,
+    title2: string,
+    title3: string,
+  }
+}
+const ServicesBox = ({ title, dict }) => {
   return (<>
     <div className="services_box p-4">
       <div className='logo_box flex justify-center items-center pt-[20%]'>
@@ -12,8 +20,7 @@ const ServicesBox = ({ title }) => {
       <p className="title_service text-black pt-4 text-xl">{title}</p>
       <p className="info_service text-stone-600 text-sm pt-2 indent-3 max-w-[90%] mx-auto ">
         <span className="text-lg max-w-[90%]">
-          {title == "Webseiten erstellen" ? "Webseiten durch NextJS, ReactJS, JavaScript, TailWind, CSS und HTML erstellen"
-            : title == "Seiten zeichnen" ? "Seiten durch Figma, Gimp, Krita und Luancy zeichnen" : "Linux als OS verwenden und es in manchen Bereichen verwenden, LPIC 1"}
+          {title == dict.title1 ? dict.description1 : title == dict.title2 ? dict.description2 : dict.description3}
         </span>
       </p>
     </div>

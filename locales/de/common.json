@@ -1,0 +1,31 @@
+{
+  "header": {
+    "services": "Dienstleistungen",
+    "projects": "Projekte",
+    "experiences": "Erfahrungen",
+    "contact": "Kontakt",
+    "cv": "Lebenslauf"
+  },
+  "main": {
+    "details": "Ich bin Ali, 18 Jahre alt und arbeite als Frontend-Entwickler.Ich interessiere mich nicht nur für Frontend, sondern auch für Linux und die Programmiersprache Python. Diese Webseite ist meine persönliche Seite, die mit Next.js erstellt wurde, um einen besseren Einblick in mich zu geben."
+  },
+  "services": {
+    "what": "Was kann ich tun?",
+    "title1": "Webseiten erstellen",
+    "title2": "Seiten zeichnen",
+    "title3": "Linux",
+    "description1": "Webseiten durch NextJS, ReactJS, JavaScript, TailWind, CSS und HTML erstellen",
+    "description2": "Seiten durch Figma, Gimp, Krita und Luancy zeichnen",
+    "description3": "Linux als OS verwenden und es in manchen Bereichen verwenden, LPIC 1"
+  },
+  "experices": {
+    "title": "Berufliche Erfahrungen",
+    "lang": "de"
+  },
+  "contact": {
+    "title": "Möchten Sie mit mir Kontakt knüpfen ?",
+    "phone": "Handynummer",
+    "mail": "E-Mail Adresse",
+    "location": "Adresse"
+  }
+}

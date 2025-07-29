@@ -1,11 +1,19 @@
 "use client"
 import { Element } from "react-scroll";
-const Contact = () => {
+type contactProps = {
+  dict: {
+    title: string,
+    phone: string,
+    mail: string,
+    location: string
+  }
+}
+const Contact = ({ dict }: contactProps) => {
   return (
     <>
       <Element name='contact' className="">
         <div className="info px-10 py-18 flex flex-col gap-10">
-          <p className="title_info text-3xl">Möchten Sie mit mir Kontakt knüpfen ?</p>
+          <p className="title_info text-3xl">{dict.title}</p>
           <div className="phone_box flex justify-start gap-4 items-center">
             <div className="phone_logo w-12 h-12 bg-[#9ec5d5] flex justify-center items-center rounded-xl">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="black" className="size-6">
@@ -13,7 +21,7 @@ const Contact = () => {
               </svg>
             </div>
             <p className="phone flex flex-col">
-              <span className="text-stone-500 text-sm">Handynummer</span>
+              <span className="text-stone-500 text-sm">{dict.phone}</span>
               <span className="text-xl">0913***33</span>
             </p>
           </div>
@@ -26,7 +34,7 @@ const Contact = () => {
 
             </div>
             <p className="mail flex flex-col">
-              <span className="text-stone-500 text-sm">E-Mail Adresse</span>
+              <span className="text-stone-500 text-sm">{dict.mail}</span>
               <span className="text-xl">aliashooriyoon@yahoo.com</span>
             </p>
           </div>
@@ -38,7 +46,7 @@ const Contact = () => {
               </svg>
             </div>
             <p className="adresse flex flex-col">
-              <span className="text-stone-500 text-sm">Adresse</span>
+              <span className="text-stone-500 text-sm">{dict.location}</span>
               <span className="text-xl">Iran, Isfahan</span>
             </p>
           </div>
