@@ -8,7 +8,7 @@ type servicesBoxProps = {
 }
 const ServicesBox = ({ title, dict }) => {
   return (<>
-    <div className="services_box p-4 max-w-[90%] max-md:w-[85%] h-[20rem]">
+    <div className="services_box p-4 w-[20rem] max-md:max-w-[90%] max-md:w-[85%] h-[20rem]">
       <div className='logo_box flex justify-center items-center pt-[20%]'>
         <div className="logo_service w-14 h-14 bg-[rgb(0,117,149,30%)] max-auto rounded-2xl flex justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="black" className="size-8">
