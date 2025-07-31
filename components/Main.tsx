@@ -23,7 +23,7 @@ export const Main = ({ dict }: MainProps) => {
           <div className="logos_networking"></div>
         </div>
         <div className="picture_box max-sm:w-full  max-sm:flex justify-center items-center">
-          <div className="w-72 max-[320px]:w-52 max-sm:w-60 h-96 mx-auto  bg-[#023E6F] rounded-2xl -rotate-14">
+          <div className="w-72  max-sm:w-60 max-[320px]:w-52 h-96 mx-auto  bg-[#023E6F] rounded-2xl -rotate-14">
             <div className="relative max-[320px]:w-52 max-sm:right-1/2 max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:w-[99%]  w-72 h-96 bg-stone-400 rounded-2xl rotate-14 overflow-hidden">
               <Image className="absolute -bottom-8 -left-5 h-[90%] w-[80%] rounded-2xl opacity-85 " src={myPic} alt="myPic" />
             </div>
