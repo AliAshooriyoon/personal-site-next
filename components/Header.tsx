@@ -85,7 +85,7 @@ export const Header = ({ dict }: HeaderProps) => {
           <Image className="w-36 h-28" src={Logo} alt="header_logo" />
         </Link>
       </div>
-      {barStat && <div className="miniBar rounded-xl md:hidden p-4 z-20 w-full h-18 fixed  left-1 bottom-1  bg-[rgb(158,197,213,88%)]">
+      {barStat && <div className="miniBar rounded-xl md:hidden p-4 z-20 w-full h-18 fixed  left-0 bottom-0  bg-[rgb(158,197,213,88%)]">
         <div className="list_menu text-black flex flex-row gap-4 max-sm:text-sm md:text-xl list-none justify-between">
           <li className="item cursor-pointer">
 
