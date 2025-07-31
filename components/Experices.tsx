@@ -13,9 +13,9 @@ const Experices = ({ dict }: ExperiveProps) => {
   const [selectedEx, setSelectedEx] = useState(1);
   return (
     <>
-      <Element name='experices' className="bg-[rgb(21,19,19,56%)] py-24 px-12">
+      <Element className="experices max-md:flex max-md:flex-col bg-[rgb(21,19,19,56%)] py-24 px-12" name='experices'>
         <p className="title_experices text-4xl">{dict.title}</p>
-        <div className="main_experices flex items-center flex-row justify-start">
+        <div className="main_experices flex items-center max-md:flex-col flex-row justify-start">
           <div className="names_experices list-none flex  flex-col gap-12 p-8 w-80">
             <li onClick={() => setSelectedEx(1)} className={` ${selectedEx == 1 ? "selected flex items-center justify-around" : ""}
         name_experices  border-2 p-2 rounded-lg cursor-pointer`}>Code Amooz
@@ -35,7 +35,7 @@ const Experices = ({ dict }: ExperiveProps) => {
               </span>}
             </li>
           </div>
-          <div className="details_experices pl-28 flex flex-col gap-2 pt-12">
+          <div className="details_experices max-md:pl-12 md:pl-28 flex flex-col gap-2 pt-12">
             <p className="details_title text-xl text-[#9ec5d5]"> {dict.lang == "de" ? expericesData[selectedEx - 1].title : expericesData[selectedEx - 1].en.title} </p>
             <p className="place_details   text-sm">{expericesData[selectedEx - 1].adresse}</p>
             <span className="date_details text-sm">{dict.lang == "de" ? expericesData[selectedEx - 1].date : expericesData[selectedEx - 1].en.date}</span>
