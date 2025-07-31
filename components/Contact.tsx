@@ -35,7 +35,7 @@ const Contact = ({ dict }: contactProps) => {
             </div>
             <p className="mail flex flex-col">
               <span className="text-stone-500 text-sm">{dict.mail}</span>
-              <span className="text-xl max-md:text-lg">aliashooriyoon@yahoo.com</span>
+              <span className="text-xl max-[417px]:text-sm">aliashooriyoon@yahoo.com</span>
             </p>
           </div>
           <div className="adresse_box flex justify-start gap-4 items-center">
