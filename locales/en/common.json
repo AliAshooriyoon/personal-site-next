@@ -27,5 +27,8 @@
     "phone": "mobile number",
     "mail": "e-mail address",
     "location": "address"
+  },
+  "projects": {
+    "title": "My projects"
   }
 }

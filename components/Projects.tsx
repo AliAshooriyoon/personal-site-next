@@ -2,11 +2,16 @@
 import ProjectBox from "./ProjectBox";
 import "./projects.css"
 import { Element } from "react-scroll"
-const Projects = () => {
+type projectProps = {
+  dict: {
+    title: string
+  }
+}
+const Projects = ({ dict }: projectProps) => {
   return (
     <>
-      <Element className="py-32" name='projects' >
-        <h3 className="projects_title text-3xl md:text-left md:pl-22 max-md:text-center">Meine Projekte</h3>
+      <Element className="py-32" name='projects'>
+        <h3 className="projects_title text-3xl md:text-left md:pl-22 max-md:text-center">{dict.title}</h3>
         <div className="absolute right-20 gap-4 hidden">
           <div className=" bg-zinc-400  w-10 h-10 rounded-2xl flex items-center justify-center cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="black" className="size-6 rotate-180">
