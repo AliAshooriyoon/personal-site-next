@@ -22,19 +22,20 @@ type HeaderProps = {
 };
 
 export const Header = ({ dict }: HeaderProps) => {
-  const [barStat, setBarStat] = useState(false);
+  const [barStat, setBarStat] = useState(window.innerWidth < 500 ? true : false);
+
   useEffect(() => {
-    window.addEventListener("resize", () => {
+    window.addEventListener("load", () => {
 
       console.log("--------------")
       console.log(window.innerHeight)
       console.log(window.innerWidth)
       setBarStat(window.innerWidth < 500 ? true : false)
     })
-  })
+  }, [])
   return (
     <>
-      <div className="flex justify-center items-center 2xl:gap-40 xl:gap-20 lg:gap-2 max-md:hidden">
+      <div className="flex justify-center items-center 2xl:gap-40 xl:gap-20 lg:gap-2 max-md:hidden ">
         <Link to="home" smooth={true} duration={500}>
           <Image className="w-36 h-28" src={Logo} alt="header_logo" />
         </Link>
@@ -84,7 +85,7 @@ export const Header = ({ dict }: HeaderProps) => {
           <Image className="w-36 h-28" src={Logo} alt="header_logo" />
         </Link>
       </div>
-      {barStat && <div className="miniBar rounded-xl md:hidden p-4 z-10 w-full h-18 fixed  left-0 bottom-0  bg-[rgb(158,197,213,88%)]">
+      {barStat && <div className="miniBar rounded-xl md:hidden p-4 z-20 w-full h-18 fixed  left-1 bottom-1  bg-[rgb(158,197,213,88%)]">
         <div className="list_menu text-black flex flex-row gap-4 max-sm:text-sm md:text-xl list-none justify-between">
           <li className="item cursor-pointer">
 

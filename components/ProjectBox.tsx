@@ -7,7 +7,7 @@ const ProjectBox = ({ imageAdresse, title, technology, linkOnGit }) => {
   console.log(imageAdresse)
   return (
     <a href={linkOnGit} target="_blank">
-      <div className="bg-none relative project_box w-80 h-80 cursor-pointer ">
+      <div className="bg-none relative project_box max-md:w-72 md:w-80 h-80 cursor-pointer ">
         <div
           className="test relative w-full h-full rounded-2xl bg-center inset-0 bg-no-repeat bg-cover opacity-20"
           style={{ backgroundImage: `url('${imageAdresse}.jpg')` }}

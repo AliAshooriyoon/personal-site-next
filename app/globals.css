@@ -1,8 +1,12 @@
 @import 'tailwindcss';
-
+html {
+  width: 100vw;
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {

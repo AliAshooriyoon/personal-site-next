@@ -19,7 +19,7 @@ const Projects = () => {
             </svg>
           </div>
         </div>
-        <div className="projects_box max-md:flex-col flex gap-18 justify-center items-center p-12">
+        <div className="projects_box flex-wrap max-md:flex-col flex gap-18 justify-center items-center p-12">
           <ProjectBox linkOnGit={'https://github.com/AliAshooriyoon/todoList'} technology={'React.js'} title={'ToDo list project'} imageAdresse={'ToDo'} />
           <ProjectBox linkOnGit={'https://github.com/AliAshooriyoon/LoremIpsumGenerator'} technology={'JavaScript'} title={'Lorem ipsum generator'} imageAdresse={'lorem'} />
           <ProjectBox linkOnGit={'https://github.com/AliAshooriyoon/onlineShop'} technology={'React.js'} title={'Shop project'} imageAdresse={"shopLogo"} />
