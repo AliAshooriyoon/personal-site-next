@@ -66,7 +66,6 @@ export const Header = ({ dict }: HeaderProps) => {
             </Link>
           </li>
         </div>
-
         <div className="options flex items-center gap-8">
           <div className="languageSelector relative">
             <Image
@@ -92,15 +91,39 @@ export const Header = ({ dict }: HeaderProps) => {
         </div>
       </div >
 
-      <div className="w-full flex justify-start h-20 items-center p-6 md:hidden">
+
+      <div className="w-full flex max-md:justify-around md:justify-start h-20 items-center md:p-6 md:hidden">
         {/* <div className="cursor-pointer" onClick={() => setBarStat(!barStat)}> */}
         {/*   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10"> */}
         {/*     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /> */}
         {/*   </svg> */}
         {/* </div> */}
         <Link to="home" smooth={true} duration={500}>
-          <Image className="w-36 h-28" src={Logo} alt="header_logo" />
+          <Image className="max-md:w-32 max-md:h-24" src={Logo} alt="header_logo" />
         </Link>
+        <div className="options flex items-end gap-4">
+          <div className="languageSelector relative">
+            <Image
+              className=" w-12 h-12 cursor-pointer"
+              src={lang == "/de" ? germanyLogo : usaLogo}
+              alt="Night mode"
+              onClick={() => setShowLangs(!showLangs)}
+            />
+            {
+              showLangs && <div className="languagesOptions w-44  bg-stone-200 absolute rounded-xl z-20 mx-auto right-1/2 left-1/2 -translate-x-1/2 mt-2">
+                <a href="/de" className="cursor-pointer flex flex-row justify-start pl-2 py-1 items-center border-2 text-black gap-2">
+                  <Image className="w-8 h-8" src={germanyLogo} alt='' /> German
+                </a>
+                <a href="/en" className="cursor-pointer flex flex-row justify-start pl-2 py-1 items-center border-2 text-black gap-2">
+                  <Image className="w-8 h-8" src={usaLogo} alt='' /> English
+                </a>
+              </div>
+            }
+          </div>
+          <button className="text-white px-6 py-2.5 border-2 rounded-xl hover:bg-white hover:text-black delay-100 cursor-pointer">
+            {dict.cv}
+          </button>
+        </div>
       </div>
       {
         barStat && <div className="miniBar rounded-xl md:hidden p-4 z-20 w-full h-18 fixed  left-0 bottom-0  bg-[rgb(158,197,213,88%)]">
