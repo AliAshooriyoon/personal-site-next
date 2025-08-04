@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const dict = await getDictionary(locale); // Optional, falls du Übersetzungen hier brauchst;
+  // const dict = await getDictionary(locale); // Optional, falls du Übersetzungen hier brauchst;
   return (
     <html lang={locale}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
