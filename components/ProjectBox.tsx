@@ -3,7 +3,7 @@ import "./ProjectBox.css";
 import lorem from "@/public/lorem.jpg"
 import ToDo from "@/public/3d-illustration-hand-putting-tick-paper.jpg"
 import shop from "@/public/shopLogo.jpg"
-const ProjectBox = ({ imageAdresse, title, technology, linkOnGit }) => {
+const ProjectBox = ({ imageAdresse, title, technology, linkOnGit }: { imageAdresse: string, title: string, technology: string, linkOnGit: string }) => {
   console.log(imageAdresse)
   return (
     <a href={linkOnGit} target="_blank">
