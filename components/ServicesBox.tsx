@@ -6,7 +6,14 @@ type servicesBoxProps = {
     title3: string,
   }
 }
-const ServicesBox = ({ title, dict }) => {
+const ServicesBox = ({ title, dict }: {
+  dict: {
+    what: string,
+    title1: string,
+    title2: string,
+    title3: string,
+  }, title: string
+}) => {
   return (<>
     <div className="services_box p-4 w-[20rem] max-md:max-w-[90%] max-md:w-[85%] h-[20rem]">
       <div className='logo_box flex justify-center items-center pt-[20%]'>
