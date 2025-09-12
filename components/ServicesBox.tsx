@@ -12,7 +12,11 @@ const ServicesBox = ({ title, dict }: {
     title1: string,
     title2: string,
     title3: string,
-  }, title: string
+    description1: string,
+    description2: string,
+    description3: string
+  }, title: string,
+
 }) => {
   return (<>
     <div className="services_box p-4 w-[20rem] max-md:max-w-[90%] max-md:w-[85%] h-[20rem]">
@@ -27,7 +31,8 @@ const ServicesBox = ({ title, dict }: {
       <p className="title_service text-black pt-4 text-xl">{title}</p>
       <p className="info_service text-stone-600 text-sm pt-2 indent-3 max-w-[90%] mx-auto ">
         <span className="text-lg max-w-[90%]">
-          {title == dict.title1 ? dict.description1 : title == dict.title2 ? dict.description2 : dict.description3}
+          {title == dict.title1 ? dict.description1 : title
+            == dict.title2 ? dict.description2 : dict.description3}
         </span>
       </p>
     </div>
