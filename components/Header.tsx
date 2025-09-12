@@ -9,10 +9,16 @@ import ServiceLogo from "@/public/icons8-provider-100.png";
 import ProjectLogo from "@/public/icons8-project-100.png";
 import ExpLogo from "@/public/icons8-experience-100.png";
 import ContactLogo from "@/public/icons8-contact-100.png";
-import { Link as ScrollLink } from "react-scroll";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+// React Scroll nur im Client importieren
+const ScrollLink = dynamic(
+  () => import("react-scroll").then((mod) => mod.Link),
+  { ssr: false }
+);
 
 type HeaderProps = {
   dict: {
@@ -25,10 +31,13 @@ type HeaderProps = {
 };
 
 export const Header = ({ dict }: HeaderProps) => {
-  const [barStat, setBarStat] = useState(window.innerWidth < 500);
+  const [barStat, setBarStat] = useState(false); // SSR-safe
   const [showLangs, setShowLangs] = useState(false);
 
   useEffect(() => {
+    // window existiert jetzt sicher
+    setBarStat(window.innerWidth < 500);
+
     const handleResize = () => {
       setBarStat(window.innerWidth < 500);
     };
@@ -158,25 +167,21 @@ export const Header = ({ dict }: HeaderProps) => {
             <li className="cursor-pointer flex items-center gap-2 flex-wrap">
               <ScrollLink to="services" smooth={true} duration={500}>
                 <Image className="item_logo" src={ServiceLogo} alt="Services" />
-                {/* {dict.services} */}
               </ScrollLink>
             </li>
             <li className="cursor-pointer flex items-center gap-2 flex-wrap">
               <ScrollLink to="projects" smooth={true} duration={500}>
                 <Image className="item_logo" src={ProjectLogo} alt="Projects" />
-                {/* {dict.projects} */}
               </ScrollLink>
             </li>
             <li className="cursor-pointer flex items-center gap-2 flex-wrap">
               <ScrollLink to="experices" smooth={true} duration={700}>
                 <Image className="item_logo" src={ExpLogo} alt="Experiences" />
-                {/* {dict.experiences} */}
               </ScrollLink>
             </li>
             <li className="cursor-pointer flex items-center gap-2 flex-wrap">
               <ScrollLink to="contact" smooth={true} duration={500}>
                 <Image className="item_logo" src={ContactLogo} alt="Contact" />
-                {/* {dict.contact} */}
               </ScrollLink>
             </li>
           </ul>
