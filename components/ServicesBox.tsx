@@ -36,7 +36,6 @@ const ServicesBox = ({ title, dict }: {
         </span>
       </p>
     </div>
-
   </>)
 }
 export default ServicesBox;
