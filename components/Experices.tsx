@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { Dispatch, SetStateAction, useState } from "react"
 import "./Experices.css"
 import { expericesData } from "@/expericesData"
 import { Element } from "react-scroll";
@@ -10,7 +10,7 @@ type ExperiveProps = {
   }
 }
 const Experices = ({ dict }: ExperiveProps) => {
-  const [selectedEx, setSelectedEx] = useState(1);
+  const [selectedEx, setSelectedEx]: [number, Dispatch<SetStateAction<number>>] = useState(1);
   return (
     <>
       <Element className="experices max-md:flex max-md:flex-col bg-[rgb(21,19,19,56%)] py-24 px-12" name='experices'>
